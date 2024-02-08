@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  empiresallies:
+    platform: linux/amd64
+    image: empiresallies
+    container_name: empiresallies
+    build:
+      context: https://github.com/Ve-Ka/RaiseTheEmpiresDocker.git
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    ports:
+      - 1000:80
